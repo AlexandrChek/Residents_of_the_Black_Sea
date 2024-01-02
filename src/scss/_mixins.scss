@@ -1,0 +1,49 @@
+@import './variables';
+
+@mixin fish_settings($f-width, $f-top, $f-animation, $f-animation-time, $f-animation-time-576, $f-animation-time-992, $f-animation-time-1400) {
+    width: $f-width;
+    position: absolute;
+    top: $f-top;
+    -webkit-animation: $f-animation $f-animation-time ease-out infinite;
+    -moz-animation: $f-animation $f-animation-time ease-out infinite;
+    -o-animation: $f-animation $f-animation-time ease-out infinite;
+    animation: $f-animation $f-animation-time ease-out infinite;
+    @media(min-width: 576px) {
+        -webkit-animation-duration: $f-animation-time-576;
+        -moz-animation-duration: $f-animation-time-576;
+        -o-animation-duration: $f-animation-time-576;
+        animation-duration: $f-animation-time-576;
+    }
+    @media(min-width: 992px) {
+        -webkit-animation-duration: $f-animation-time-992;
+        -moz-animation-duration: $f-animation-time-992;
+        -o-animation-duration: $f-animation-time-992;
+        animation-duration: $f-animation-time-992;
+    }
+    @media(min-width: 1400px) {
+        -webkit-animation-duration: $f-animation-time-1400;
+        -moz-animation-duration: $f-animation-time-1400;
+        -o-animation-duration: $f-animation-time-1400;
+        animation-duration: $f-animation-time-1400;
+    }
+}
+
+@mixin arrow-btn($base-arrow-side, $padding-rt, $padding-lt) {
+    position: absolute;
+    background-color: rgba(255, 255, 255, .85);
+    border-radius: 50%;
+    padding: $arrow-padding $padding-rt $arrow-padding $padding-lt;
+    cursor: pointer;
+    &:hover {
+        background: $green-shine;
+    }
+    .arrow {
+        width: 0;
+        border-#{$base-arrow-side}: $arrow-height solid black;
+        border-top: calc($arrow-height / 2) solid transparent;
+        border-bottom: calc($arrow-height / 2) solid transparent; 
+    }
+    &:hover .arrow {
+        border-#{$base-arrow-side}-color: $toxic-green;
+    }
+}

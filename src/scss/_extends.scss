@@ -1,0 +1,43 @@
+@import './variables';
+
+%header-height {
+    height: calc($header-without-margin * 0.09);
+    @media(min-width: 576px) {
+        height: calc($header-without-margin * 0.07);
+    }
+    @media(min-width: 992px) {
+        height: calc($header-without-margin * 0.05);
+    }
+}
+
+%big-bottom-wrapper {
+    padding: 0 $header-margin $header-margin $header-margin;
+    @media(min-width: 1200px) {
+        max-width: $big-bottom-wrapper-max-width;
+        margin: 0 auto;
+    }
+}
+
+%media-modal-height {
+    max-height: $media-height;
+    @media(min-width: 1200px) {
+        max-height: $media-height-1200;
+    }
+}
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%label-style {
+    color: $light-green;
+    font-weight: bold;
+    margin-right: $header-margin;
+}
+
+%justified-paragraph {
+    text-align: justify;
+    text-indent: calc($main-text-f-size * 2);
+}

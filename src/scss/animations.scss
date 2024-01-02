@@ -1,0 +1,137 @@
+@import './variables';
+
+@-webkit-keyframes right-fish {
+    0% {right: 0;}
+    100% {right: 100vw;}
+}
+@-moz-keyframes right-fish {
+    0% {right: 0;}
+    100% {right: 100vw;}
+}
+@-o-keyframes right-fish {
+    0% {right: 0;}
+    100% {right: 100vw;}
+}
+@keyframes right-fish {
+    0% {right: 0;}
+    100% {right: 100vw;}
+}
+/*--------------------------------------*/
+@-webkit-keyframes left-fish {
+    0% {left: 0;}
+    100% {left: 100vw;}
+}
+@-moz-keyframes left-fish {
+    0% {left: 0;}
+    100% {left: 100vw;}
+}
+@-o-keyframes left-fish {
+    0% {left: 0;}
+    100% {left: 100vw;}
+}
+@keyframes left-fish {
+    0% {left: 0;}
+    100% {left: 100vw;}
+}
+/*---------------------------------------*/
+@-webkit-keyframes first-circle-flicker {
+    0% {border-color: transparent;}
+    50% {border-color: $toxic-green;}
+    100% {border-color: transparent;}
+}
+@-moz-keyframes first-circle-flicker {
+    0% {border-color: transparent;}
+    50% {border-color: $toxic-green;}
+    100% {border-color: transparent;}
+}
+@-o-keyframes first-circle-flicker {
+    0% {border-color: transparent;}
+    50% {border-color: $toxic-green;}
+    100% {border-color: transparent;}
+}
+@keyframes first-circle-flicker {
+    0% {border-color: transparent;}
+    50% {border-color: $toxic-green;}
+    100% {border-color: transparent;}
+}
+/*---------------------------------------*/
+$final-shadow: 0 0 calc(3px + 1.7vw) calc(2px + 0.3vw) $toxic-green;
+
+@-webkit-keyframes second-circle-flicker {
+    0% {border-color: transparent;}
+    50% {
+        border-color: transparent;
+        box-shadow: none;
+    }
+    100% {
+        border-color: $toxic-green;
+        box-shadow: $final-shadow;
+    }
+}
+@-moz-keyframes second-circle-flicker {
+    0% {border-color: transparent;}
+    50% {
+        border-color: transparent;
+        box-shadow: none;
+    }
+    100% {
+        border-color: $toxic-green;
+        box-shadow: $final-shadow;
+    }
+}
+@-o-keyframes second-circle-flicker {
+    0% {border-color: transparent;}
+    50% {
+        border-color: transparent;
+        box-shadow: none;
+    }
+    100% {
+        border-color: $toxic-green;
+        box-shadow: $final-shadow;
+    }
+}
+@keyframes second-circle-flicker {
+    0% {border-color: transparent;}
+    50% {
+        border-color: transparent;
+        box-shadow: none;
+    }
+    100% {
+        border-color: $toxic-green;
+        box-shadow: $final-shadow;
+    }
+}
+/*---------------------------------------*/
+@-webkit-keyframes spinner-rotating {
+    0% {transform: rotate(360deg);}
+    100% {transform: rotate(0deg);}
+}
+@-moz-keyframes spinner-rotating {
+    0% {transform: rotate(360deg);}
+    100% {transform: rotate(0deg);}
+}
+@-o-keyframes spinner-rotating {
+    0% {transform: rotate(360deg);}
+    100% {transform: rotate(0deg);}
+}
+@keyframes spinner-rotating {
+    0% {transform: rotate(360deg);}
+    100% {transform: rotate(0deg);}
+}
+/*---------------------------------------*/
+@-webkit-keyframes spinner-scaling {
+    0% {transform: scale(1);}
+    100% {transform: scale(5);}
+}
+@-moz-keyframes spinner-scaling {
+    0% {transform: scale(1);}
+    100% {transform: scale(5);}
+}
+@-o-keyframes spinner-scaling {
+    0% {transform: scale(1);}
+    100% {transform: scale(5);}
+}
+@keyframes spinner-scaling {
+    0% {transform: scale(1);}
+    100% {transform: scale(5);}
+}
