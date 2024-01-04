@@ -50,7 +50,10 @@ export default {
     .horiz {
         display: inline-flex;
         justify-content: space-between;
-        align-items: center;
+        padding-top: 5px;
+        @media(min-width: 1200px) {
+            padding: 0;
+        }
     }
     .item-wrapper {
         display: flex;

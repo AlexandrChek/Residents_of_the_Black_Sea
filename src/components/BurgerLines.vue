@@ -19,8 +19,7 @@ name: 'BurgerLines'
     justify-content: space-around;
     height: $logo-width;
     @media(min-width: 768px) {
-        margin-top: 3px;
-        width: 90%;
+        width: 88%;
     }
 }
 .line {
