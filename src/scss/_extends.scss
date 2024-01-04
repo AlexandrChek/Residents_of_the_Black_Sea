@@ -1,15 +1,5 @@
 @import './variables';
 
-%header-height {
-    height: calc($header-without-margin * 0.09);
-    @media(min-width: 576px) {
-        height: calc($header-without-margin * 0.07);
-    }
-    @media(min-width: 992px) {
-        height: calc($header-without-margin * 0.05);
-    }
-}
-
 %big-bottom-wrapper {
     padding: 0 $header-margin $header-margin $header-margin;
     @media(min-width: 1200px) {

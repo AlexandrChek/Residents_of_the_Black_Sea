@@ -37,8 +37,8 @@ export default {
 
 @mixin tailprops($t-margin, $t-border) {
     margin: $t-margin;
-    border-top: $t-border;
-    border-bottom: $t-border;
+    border-top: $t-border solid transparent;
+    border-bottom: $t-border solid transparent;
 }
 
     .vert {
@@ -46,13 +46,11 @@ export default {
         right: calc($header-margin + ($header-without-margin * 0.1));
         top: $header-margin;
         z-index: 3;
-        @media(min-width: 576px) {
-            right: calc($header-margin + ($header-without-margin * 0.09));
-        }
     }
     .horiz {
         display: inline-flex;
         justify-content: space-between;
+        align-items: center;
     }
     .item-wrapper {
         display: flex;
@@ -68,9 +66,9 @@ export default {
     .tail {
         width: 0;
         height: 9px;
-        @include tailprops(auto 0, 21px solid transparent);
+        @include tailprops(auto 0, 21px);
         @media(min-width: 992px) {
-            @include tailprops(0, calc(($header-without-margin * 0.05 - 7px - 9px) / 2) solid transparent);
+            @include tailprops(0, calc(($header-without-margin * 0.05 - 7px - 9px) / 2));
         }
     }
 

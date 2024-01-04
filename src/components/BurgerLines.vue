@@ -11,13 +11,17 @@ name: 'BurgerLines'
 </script>
 
 <style scoped lang="scss">
-@import '../scss/extends';
+@import '../scss/variables';
 
 .burger-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    @extend %header-height;
+    justify-content: space-around;
+    height: $logo-width;
+    @media(min-width: 768px) {
+        margin-top: 3px;
+        width: 90%;
+    }
 }
 .line {
     width: 100%;

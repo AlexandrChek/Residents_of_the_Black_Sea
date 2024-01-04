@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <router-link to="/">
         <img src="../pictures/logo.jpg" alt="Logo" class="logo">
-    </div>
+    </router-link>
 </template>
 
 <script>
@@ -11,13 +11,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../scss/extends';
+@import '../scss/variables';
 
-div {
-    @extend %header-height;
-}
 .logo {
-      max-width: 100%;
-      border-radius: 50%;
+    width: $logo-width;
+    height: $logo-width;
+    border-radius: 50%;
 }
 </style>

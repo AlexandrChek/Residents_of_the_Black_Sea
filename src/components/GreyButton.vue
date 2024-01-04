@@ -14,7 +14,7 @@ export default {
     }
 
     div {
-        border: 1px solid white;
+        border: 1px solid wheat;
         border-radius: 3px;
         width: 100%;
         @include shedow(0.15vw);

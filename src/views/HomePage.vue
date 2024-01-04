@@ -50,18 +50,15 @@ export default {
 <style scoped lang="scss">
 @import '../scss/variables';
 
-$home-min-height: calc(100vh - $header-margin * 2 - $header-without-margin * 0.09);
-
 .home {
     position: relative;
     overflow-x: hidden;
-    width: 100vw;
-    min-height: $home-min-height;
+    min-height: calc(100vh - ($header-margin * 2) - ($h1-f-size * 2));
 }
 .stars {
   position: absolute;
-  left: calc((100vw - ($main-text-f-size * 5)) / 2);
-  top: calc(($home-min-height - ($main-text-f-size * 5)) / 2 - $fish-line-height);
+  left: calc(50% - ((($main-text-f-size * 5) + 25px) / 2));
+  top: calc(50% - (($main-text-f-size * 5) + 25px));
   text-decoration: none;
 }
 </style>

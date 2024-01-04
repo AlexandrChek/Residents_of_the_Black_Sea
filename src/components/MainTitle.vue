@@ -17,12 +17,12 @@ export default {
 div {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 h1 {
-      margin: 0;
-      font-family: 'Kalam', cursive;
-      font-size: calc(10px + 3vw);
-      color: $creme-brulee;
-    }
+    margin: 0;
+    font-family: 'Kalam', cursive;
+    font-size: $h1-f-size;
+    color: $creme-brulee;
+}
 </style>
