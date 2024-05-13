@@ -22,24 +22,20 @@ name: 'RoundButton'
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100%;
-    border: 4px solid transparent;
-    width: calc($main-text-f-size * 5 + $distance);
-    height: calc($main-text-f-size * 5 + $distance);
+    border-radius: 50%;
+    border: $round-btn-circle-border-width solid transparent;
+    width: calc(5rem + $distance + $round-btn-circle-border-width);
+    height: calc(5rem + $distance + $round-btn-circle-border-width);
     -webkit-animation: $a-name 1.5s linear infinite;
     -moz-animation: $a-name 1.5s linear infinite;
-    -o-animation: $a-name 1.5s linear infinite;
     animation: $a-name 1.5s linear infinite;
-    @media(min-width: 768px) {
-        border-width: 5.5px;
-    }
 }
 
     button {
-        border-radius: 100%;
-        width: calc($main-text-f-size * 5);
-        height: calc($main-text-f-size * 5);
-        font-size: $main-text-f-size;
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        font-size: 1rem;
         font-weight: bold;
         background-color: rgb(0, 240, 0);
         color: rgb(0, 0, 100);
@@ -47,14 +43,14 @@ name: 'RoundButton'
         cursor: pointer;
         &:hover {
            background-color: $light-green;
-           width: calc($main-text-f-size * 5 + 7px);
-           height: calc($main-text-f-size * 5 + 7px); 
+           width: calc(5rem + 7px);
+           height: calc(5rem + 7px);
         }
     }
     #first-circle {
         @include green-circles(7px, first-circle-flicker);
     }
     #second-circle {
-        @include green-circles(20px, second-circle-flicker);
+        @include green-circles(19px, second-circle-flicker);
     }
 </style>

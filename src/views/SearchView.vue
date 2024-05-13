@@ -8,7 +8,7 @@
     <MySpinner v-if="spinnerIsOn"/>
     <div class="species-list-wrapper">
         <div class="letter-block" v-for="letterBlock in sortedNames" :key="letterBlock">
-            <div class="letter">{{letterBlock.letter}}</div>
+            <div class="letter">{{ letterBlock.letter }}</div>
             <NamesList :letterNames="letterBlock.names" :namesWithId="namesWithId"/>
         </div>
     </div>
@@ -21,7 +21,7 @@ import NotFound from '../components/NotFound.vue'
 import ClassSelector from '../components/ClassSelector.vue'
 import MySpinner from '../components/MySpinner.vue'
 import NamesList from '../components/NamesList.vue'
-import {serverUrl, PostOptions} from '../constants.js'
+import { serverUrl, PostOptions } from '../constants.js'
 
 export default {
     name: 'SearchView',
@@ -55,7 +55,7 @@ export default {
                 this.namesWithId = creatures
                 this.sortNames(creatures)
 
-                if(body === '/search') {
+                if (body === '/search') {
                     sessionStorage.setItem('creatures', JSON.stringify(this.namesWithId))
                 }
             })
@@ -81,9 +81,12 @@ export default {
             this.spinnerIsOn = false
         },
         saveFoundedNames(suitables) {
-            if(suitables) {
+            if (suitables) {
                 this.foundedNames = suitables
+            } else {
+                this.foundedNames = []
             }
+
             this.notFound = false
         },
         showNotFound() {
@@ -91,7 +94,7 @@ export default {
             this.notFound = true
         },
         filterByClass(val) {
-            if(val === 'ALL') {
+            if (val === 'ALL') {
                 this.sortedNames = []
                 this.getNames('/search')
             } else {
@@ -106,12 +109,13 @@ export default {
 
 <style lang="scss" scoped>
 @import '../scss/variables';
-$list-margin: calc(7px + 2vw);
+
+    $list-margin: calc(7px + 2vw);
 
     .search-container {
         border-bottom: 1px solid $toxic-green;
-        padding: $main-text-f-size 0;
-        margin-bottom: $main-text-f-size;
+        padding: 1rem 0;
+        margin-bottom: 1rem;
         position: relative;
     }
     .species-list-wrapper {
@@ -125,7 +129,7 @@ $list-margin: calc(7px + 2vw);
     }
     .letter-block {
         margin: $list-margin $list-margin 0 $list-margin;
-        width: calc($main-text-f-size * 10.7);
+        width: 10.7rem;
     }
     .letter {
         font-size: $big-f-size;

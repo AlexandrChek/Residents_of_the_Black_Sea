@@ -3,7 +3,7 @@
     <label>Filter by class</label>
     <select @focus="getClasses" @change="transmitClass($event)">
         <option v-for="animalClass in animalClasses" :key="animalClass" :value="animalClass">
-            {{animalClass}}
+            {{ animalClass }}
         </option>
     </select>
 </div>
@@ -30,7 +30,7 @@ export default {
         },
         transmitClass(event) {
             const val = event.target.value
-            if(val !== this.selected) {
+            if (val !== this.selected) {
                 this.selected = val
                 this.$emit('classSelected', val)
             }
@@ -50,13 +50,11 @@ export default {
         @extend %label-style;
     }
     select {
-        font-size: $main-text-f-size;
-        width: calc($main-text-f-size * 10);
-        border-radius: 2px;
+        font-size: 1rem;
+        line-height: 1.25;
+        min-width: calc(10rem + 16px);
+        border-radius: 3px;
         border-width: 4px;
-        border-top-color: black;
-        border-left-color: black;
-        outline: none;
         &:focus {
             background-color: $creme-brulee;
         }

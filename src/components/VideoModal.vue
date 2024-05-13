@@ -11,7 +11,7 @@ import ModalWindow from './ModalWindow.vue'
 
 export default {
     name: 'VideoModal',
-    components: {ModalWindow},
+    components: { ModalWindow },
     props: ['video'],
     methods: {
         transmitClosing() {
@@ -35,9 +35,9 @@ export default {
     }
     iframe {
         width: $media-width;
+        max-width: calc($media-height / 0.5625);
         height: calc($media-width * 0.5625);
         @extend %media-modal-height;
-        max-width: calc($media-height / 0.5625);
         @media(min-width: 1200px) {
             max-width: calc($media-height-1200 / 0.5625);
         }

@@ -1,30 +1,26 @@
 <template>
   <ModalWindow @closeMod="transmitClosing">
     <div class="photo-wrapper">
-        <ArrowBtnLeft v-show="index" @click="goLeft"/>
+        <ArrowBtn v-show="index" btnSide="left" @click="goLeft"/>
         <img :src="photos[index]" :alt="`Photo ${index}`">
-        <ArrowBtnRight v-show="index < photos.length - 1" @click="goRight"/>
+        <ArrowBtn v-show="index < photos.length - 1" btnSide="right" @click="goRight"/>
     </div>
   </ModalWindow>
 </template>
 
 <script>
 import ModalWindow from './ModalWindow.vue'
-import ArrowBtnRight from './ArrowBtnRight.vue'
-import ArrowBtnLeft from './ArrowBtnLeft.vue'
+import ArrowBtn from './ArrowBtn.vue'
 
 export default {
     name: "PhotoModal",
     components: {
         ModalWindow,
-        ArrowBtnRight,
-        ArrowBtnLeft
+        ArrowBtn
     },
     props: ['photos'],
     data() {
-        return {
-            index: 0
-        }
+        return { index: 0 }
     },
     methods: {
         goLeft() {

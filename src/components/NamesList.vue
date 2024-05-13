@@ -1,6 +1,6 @@
 <template>
     <p v-for="name in letterNames" :key="name" @click="goToCreature(name)">
-        {{name}}
+        {{ name }}
     </p>
 </template>
 
@@ -21,11 +21,11 @@ export default {
 @import '../scss/variables';
 
     p {
-        margin: 0 0 calc($main-text-f-size / 1.9) 0;
+        margin: 0 0 0.53rem 0;
         cursor: pointer;
         &:hover {
             color: $toxic-green;
-            font-size: calc($main-text-f-size * 1.02);
+            font-size: 1.02rem;
         }
         @media(min-width: 768px) {
             margin: 0;

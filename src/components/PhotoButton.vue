@@ -1,7 +1,7 @@
 <template>
   <router-link :to="'/creature/' + id" class="star-item">
     <img :src="cover" :alt="name">
-    <p>{{name}}</p>
+    <p>{{ name }}</p>
   </router-link>
 </template>
 

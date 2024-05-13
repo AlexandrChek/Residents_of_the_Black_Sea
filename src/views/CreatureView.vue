@@ -1,32 +1,32 @@
 <template>
   <div class="creature">
-    <h2>{{creature.name}}</h2>
+    <h2>{{ creature.name }}</h2>
     <div>
       <MySpinner v-if="spinnerIsOn"/>
       <div class="media">
-        <GreyButton @click="showPhotos">Photo</GreyButton>
+        <GrayButton @click="showPhotos">Photo</GrayButton>
         <PhotoModal v-if="photosDisplayed" :photos="creature.photo" @closingPhotos="closePhotos"/>
-        <GreyButton @click="showVideo">Video</GreyButton>
+        <GrayButton @click="showVideo">Video</GrayButton>
         <VideoModal v-if="videoDisplayed" :video="creature.video" @closingVideo="closeVideo"/>
       </div>
-      <ListOfParagraphs v-for="p in creature.text" :key="p">{{p}}</ListOfParagraphs>
+      <ListOfParagraphs v-for="p in creature.text" :key="p">{{ p }}</ListOfParagraphs>
     </div>
   </div>
 </template>
 
 <script>
 import MySpinner from '../components/MySpinner.vue'
-import GreyButton from '../components/GreyButton.vue'
+import GrayButton from '../components/GrayButton.vue'
 import PhotoModal from '../components/PhotoModal.vue'
 import VideoModal from '../components/VideoModal.vue'
 import ListOfParagraphs from '../components/ListOfParagraphs.vue'
-import {serverUrl, PostOptions} from '../constants.js'
+import { serverUrl, PostOptions } from '../constants.js'
 
 export default {
   name: 'CreatureView',
   components: {
     MySpinner,
-    GreyButton,
+    GrayButton,
     PhotoModal,
     VideoModal,
     ListOfParagraphs

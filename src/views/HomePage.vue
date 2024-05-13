@@ -1,20 +1,20 @@
 <template>
-<div class="home">
-  <RightFish1/>
-  <LeftFish1/>
-  <RightFish2/>
-  <LeftFish2/>
-  <RightFish3/>
-  <LeftFish3/>
-  <RightFish4/>
-  <router-link to="/stars" class="stars">
-    <RoundButton @click="goToStars">
-      Black<br/>
-      Sea<br/>
-      Stars
-    </RoundButton>
-  </router-link>
-</div>
+  <div class="home">
+    <RightFish1/>
+    <LeftFish1/>
+    <RightFish2/>
+    <LeftFish2/>
+    <RightFish3/>
+    <LeftFish3/>
+    <RightFish4/>
+    <router-link to="/stars" class="stars">
+      <RoundButton @click="goToStars">
+        Black<br/>
+        Sea<br/>
+        Stars
+      </RoundButton>
+    </router-link>
+  </div>
 </template>
 
 <script>
@@ -50,15 +50,15 @@ export default {
 <style scoped lang="scss">
 @import '../scss/variables';
 
-.home {
+  .home {
     position: relative;
     overflow-x: hidden;
     min-height: calc(100vh - ($header-margin * 2) - ($h1-f-size * 2));
-}
-.stars {
-  position: absolute;
-  left: calc(50% - ((($main-text-f-size * 5) + 25px) / 2));
-  top: calc(50% - (($main-text-f-size * 5) + 25px));
-  text-decoration: none;
-}
+  }
+  .stars {
+    position: absolute;
+    left: calc(50% - ((5rem + 19px + $round-btn-circle-border-width) / 2));
+    top: calc(50% - (5rem + 19px + $round-btn-circle-border-width));
+    text-decoration: none;
+  }
 </style>

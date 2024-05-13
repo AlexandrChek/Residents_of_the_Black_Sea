@@ -7,7 +7,7 @@ $h1-f-size: calc(10px + 3vw);
 
 $fish-line-height: calc((100vh - 9vw) / 8);
 
-$main-text-f-size: calc(9.5px + 0.9vw);
+$round-btn-circle-border-width: min(calc(2.5px + .38vw), 5.5px);
 
 $toxic-green: rgb(0, 240, 0);
 $light-green: rgb(134, 245, 134);
@@ -16,9 +16,6 @@ $pink-rose-carrot: rgb(255, 70, 105);
 $creme-brulee: rgb(255, 233, 185);
 
 $big-f-size: calc(12px + 3vw);
-
-$arrow-height: calc(9px + 1.4vw);
-$arrow-padding: calc($arrow-height / 2);
 
 $media-height: 90vh;
 $media-height-1200: 95vh;

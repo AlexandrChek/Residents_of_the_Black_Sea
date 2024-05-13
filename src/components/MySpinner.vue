@@ -24,7 +24,6 @@ export default {
     @mixin spinner($name) {
         -webkit-animation: $name $time linear infinite;
         -moz-animation: $name $time linear infinite;
-        -o-animation: $name $time linear infinite;
         animation: $name $time linear infinite;
     }
 
@@ -37,7 +36,7 @@ export default {
         top: $orbit-radius;
         left: calc(50% - (($orbit-radius - $circle-diameter) / 2));
         transform-origin: 0 $orbit-radius;
-        @include spinner(spinner-rotating);
+        @include spinner(simple-rotating);
     }
     .circle {
         position: absolute;

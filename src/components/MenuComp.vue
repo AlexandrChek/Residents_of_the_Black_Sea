@@ -3,7 +3,7 @@
     <div class="item-wrapper" v-for="item in menu" :key="item" @click="closeMenu">
         <div class="tail" :id="`bord-${item.color}`"></div>
         <router-link :to="item.to" class="menu-item" :id="`bc-${item.color}`">
-            <div>{{item.name}}</div>
+            <div>{{ item.name }}</div>
         </router-link>
     </div>
   </nav>
@@ -24,7 +24,7 @@ export default {
     },
     methods: {
         closeMenu() {
-            if(window.innerWidth < 992) {
+            if (window.innerWidth < 992) {
                 this.$emit('memuClosed')
             }
         }
@@ -67,6 +67,7 @@ export default {
         }
     }
     .tail {
+        box-sizing: content-box;
         width: 0;
         height: 9px;
         @include tailprops(auto 0, 21px);

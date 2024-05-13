@@ -31,7 +31,7 @@ components: {
   methods: {
     widthControl() {
       const condition = window.matchMedia('(min-width: 992px)')
-      if(condition.matches) {
+      if (condition.matches) {
         this.burger = false
       } else {
         this.burger = true
