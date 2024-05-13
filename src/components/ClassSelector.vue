@@ -1,16 +1,16 @@
 <template>
-<div>
-    <label>Filter by class</label>
-    <select @focus="getClasses" @change="transmitClass($event)">
-        <option v-for="animalClass in animalClasses" :key="animalClass" :value="animalClass">
-            {{ animalClass }}
-        </option>
-    </select>
-</div>
+    <div>
+        <label>Filter by class</label>
+        <select @click="getClasses" @change="transmitClass($event)">
+            <option v-for="animalClass in animalClasses" :key="animalClass" :value="animalClass">
+                {{ animalClass }}
+            </option>
+        </select>
+    </div>
 </template>
 
 <script>
-import {serverUrl, PostOptions} from '../constants.js'
+import { serverUrl, PostOptions } from '../constants.js'
 
 export default {
     name: 'ClassSelector',
