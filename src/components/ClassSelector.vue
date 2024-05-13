@@ -1,7 +1,7 @@
 <template>
     <div>
         <label>Filter by class</label>
-        <select @click="getClasses" @change="transmitClass($event)">
+        <select @focus="getClasses" @change="transmitClass($event)">
             <option v-for="animalClass in animalClasses" :key="animalClass" :value="animalClass">
                 {{ animalClass }}
             </option>
@@ -29,6 +29,7 @@ export default {
             .then(response => this.animalClasses = ['ALL', ...response])
         },
         transmitClass(event) {
+            document.querySelector('select').focus()
             const val = event.target.value
             if (val !== this.selected) {
                 this.selected = val
