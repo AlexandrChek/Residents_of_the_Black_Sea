@@ -1,7 +1,7 @@
 <template>
     <div>
         <label>Filter by class</label>
-        <select @click="getClasses" @change="transmitClass($event)">
+        <select @change="transmitClass($event)">
             <option v-for="animalClass in animalClasses" :key="animalClass" :value="animalClass">
                 {{ animalClass }}
             </option>
@@ -20,16 +20,16 @@ export default {
             selected: ''
         }
     },
+    mounted() {
+         document.addEventListener('load', this.getClasses())
+    },
     methods: {
         getClasses() {
             const getClassesOptions = new PostOptions('getClasses')
 
             fetch(serverUrl, getClassesOptions)
             .then(response => response.json())
-            .then(response => {
-                this.animalClasses = ['ALL', ...response]
-                document.querySelector('select').click()
-            })
+            .then(response => this.animalClasses = ['ALL', ...response])
         },
         transmitClass(event) {
             const val = event.target.value
