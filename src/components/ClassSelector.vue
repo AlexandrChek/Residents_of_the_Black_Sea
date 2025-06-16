@@ -25,7 +25,7 @@ export default {
     },
     methods: {
         getClasses() {
-            fetch(`${serverUrl}/classes`)
+            fetch(`${serverUrl}/api/classes`)
             .then(response => response.json())
             .then(response => this.animalClasses = ['ALL', ...response])
         },

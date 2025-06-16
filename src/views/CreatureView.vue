@@ -42,7 +42,7 @@ export default {
   created() {
     const id = this.$route.params.id
 
-    fetch(`${serverUrl}/creature/${id}`)
+    fetch(`${serverUrl}/api/creature/${id}`)
     .then(response => response.json())
     .then(response => {
       this.creature = response

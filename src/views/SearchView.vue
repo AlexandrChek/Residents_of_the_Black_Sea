@@ -43,7 +43,7 @@ export default {
         }
     },
     mounted() {
-        this.getNames('/names_and_ids')
+        this.getNames('/api/names_and_ids')
     },
     methods: {
         getNames(url) {
@@ -53,7 +53,7 @@ export default {
                 this.namesWithId = creatures
                 this.sortNames(creatures)
 
-                if (url === '/names_and_ids') {
+                if (url === '/api/names_and_ids') {
                     sessionStorage.setItem('creatures', JSON.stringify(this.namesWithId))
                 }
             })
@@ -94,10 +94,10 @@ export default {
         filterByClass(val) {
             if (val === 'ALL') {
                 this.sortedNames = []
-                this.getNames('/names_and_ids')
+                this.getNames('/api/names_and_ids')
             } else {
                 this.sortedNames = []
-                this.getNames(`/filter_by_class/${val}`)
+                this.getNames(`/api/filter_by_class/${val}`)
             }
         }
     }

@@ -23,7 +23,7 @@ export default {
         return { stars: [] }
     },
     mounted() {
-        fetch(`${serverUrl}/stars`)
+        fetch(`${serverUrl}/api/stars`)
         .then(response => response.json())
         .then(result => this.stars = result)
     }
