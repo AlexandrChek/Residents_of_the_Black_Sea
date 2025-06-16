@@ -1,4 +1,4 @@
-export const serverUrl = 'https://rbs-back.glitch.me'
+export const serverUrl = 'https://rbs-back.vercel.app'
 
 export const blackSea_1 = [
     'The most popular assumption about the origin of the name "Black Sea" is that it comes from the dark color of the water (The waters of the Black Sea are generally darker than the waters of the Azov, Marmara and Aegean seas.).',
