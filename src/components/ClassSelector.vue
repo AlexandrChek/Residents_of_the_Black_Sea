@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { serverUrl, PostOptions } from '../constants.js'
+import { serverUrl } from '../constants.js'
 
 export default {
     name: 'ClassSelector',
@@ -25,9 +25,7 @@ export default {
     },
     methods: {
         getClasses() {
-            const getClassesOptions = new PostOptions('getClasses')
-
-            fetch(serverUrl, getClassesOptions)
+            fetch(`${serverUrl}/classes`)
             .then(response => response.json())
             .then(response => this.animalClasses = ['ALL', ...response])
         },

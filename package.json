@@ -8,7 +8,6 @@
     "dev": "webpack --node-env=development",
     "build": "webpack --node-env=production"
   },
-  "browserslist": "> 0.25%, not dead",
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -32,5 +31,11 @@
   "dependencies": {
     "vue": "^3.2.36",
     "vue-router": "^4.2.4"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
 }

@@ -20,7 +20,7 @@ import GrayButton from '../components/GrayButton.vue'
 import PhotoModal from '../components/PhotoModal.vue'
 import VideoModal from '../components/VideoModal.vue'
 import ListOfParagraphs from '../components/ListOfParagraphs.vue'
-import { serverUrl, PostOptions } from '../constants.js'
+import { serverUrl } from '../constants.js'
 
 export default {
   name: 'CreatureView',
@@ -41,9 +41,8 @@ export default {
   },
   created() {
     const id = this.$route.params.id
-    const idOptions = new PostOptions(id)
 
-    fetch(serverUrl, idOptions)
+    fetch(`${serverUrl}/creature/${id}`)
     .then(response => response.json())
     .then(response => {
       this.creature = response

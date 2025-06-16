@@ -11,7 +11,7 @@
 <script>
 import MySpinner from '../components/MySpinner.vue'
 import PhotoButton from '../components/PhotoButton.vue'
-import { serverUrl, PostOptions } from '../constants.js'
+import { serverUrl } from '../constants.js'
 
 export default {
     name: 'ViewStars',
@@ -23,9 +23,7 @@ export default {
         return { stars: [] }
     },
     mounted() {
-        const starsOptions = new PostOptions('/stars')
-
-        fetch(serverUrl, starsOptions)
+        fetch(`${serverUrl}/stars`)
         .then(response => response.json())
         .then(result => this.stars = result)
     }

@@ -1,13 +1,5 @@
 export const serverUrl = 'https://rbs-back.glitch.me'
 
-export class PostOptions {
-    constructor(body) {
-        this.method = 'POST'
-        this.headers = {'Content-Type': 'text/plain'}
-        this.body = body
-    }
-}
-
 export const blackSea_1 = [
     'The most popular assumption about the origin of the name "Black Sea" is that it comes from the dark color of the water (The waters of the Black Sea are generally darker than the waters of the Azov, Marmara and Aegean seas.).',
     'The Black Sea is a marginal mediterranean sea lying between Europe and Asia, east of the Balkans, south of the East European Plain, west of the Caucasus, and north of Anatolia. It is bounded by Bulgaria, Georgia, Romania, Russia, Turkey, and Ukraine. The Black Sea is supplied by major rivers, principally the Danube, Dnieper and Don. Consequently, while six countries have a coastline on the sea, its drainage basin includes parts of 24 countries in Europe.'

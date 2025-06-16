@@ -21,7 +21,7 @@ import NotFound from '../components/NotFound.vue'
 import ClassSelector from '../components/ClassSelector.vue'
 import MySpinner from '../components/MySpinner.vue'
 import NamesList from '../components/NamesList.vue'
-import { serverUrl, PostOptions } from '../constants.js'
+import { serverUrl } from '../constants.js'
 
 export default {
     name: 'SearchView',
@@ -43,19 +43,17 @@ export default {
         }
     },
     mounted() {
-        this.getNames('/search')
+        this.getNames('/names_and_ids')
     },
     methods: {
-        getNames(body) {
-            const searchOptions = new PostOptions(body)
-
-            fetch(serverUrl, searchOptions)
+        getNames(url) {
+            fetch(`${serverUrl}${url}`)
             .then(response => response.json())
             .then(creatures => {
                 this.namesWithId = creatures
                 this.sortNames(creatures)
 
-                if (body === '/search') {
+                if (url === '/names_and_ids') {
                     sessionStorage.setItem('creatures', JSON.stringify(this.namesWithId))
                 }
             })
@@ -96,11 +94,10 @@ export default {
         filterByClass(val) {
             if (val === 'ALL') {
                 this.sortedNames = []
-                this.getNames('/search')
+                this.getNames('/names_and_ids')
             } else {
-                const body = `filterByClass ${val}`
                 this.sortedNames = []
-                this.getNames(body)
+                this.getNames(`/filter_by_class/${val}`)
             }
         }
     }
